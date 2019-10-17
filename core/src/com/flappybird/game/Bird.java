@@ -27,9 +27,14 @@ public class Bird {
     public void upDate(){
 
         if(Gdx.input.isKeyPressed(Input.Keys.SPACE)){
-            vy=10;
+            vy=8;
         }
         vy +=gravity;
         position.y += vy;
+    }
+
+    public void reCreate(){
+        position = new Vector2(100,380);
+        vy=0;
     }
 }
