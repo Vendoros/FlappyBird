@@ -44,14 +44,14 @@ public class MyGdxGame extends ApplicationAdapter {
         bg.upDate();
         bird.upDate();
         obstacles.upDate();
-        for (int i = 0; i < Obstacles.wall.length; i++) {
-            if (bird.position.x > Obstacles.wall[i].position.x
-                    && bird.position.x > Obstacles.wall[i].position.x + 50) {
-                if (Obstacles.wall[i].emptySpace.contains(bird.position)) {
-                    gameOver = true;
-                }
-            }
-        }
+//        for (int i = 0; i < Obstacles.wall.length; i++) {
+//            if (bird.position.x > Obstacles.wall[i].position.x
+//                    && bird.position.x > Obstacles.wall[i].position.x + 50) {
+//                if (!Obstacles.wall[i].emptySpace.contains(bird.position)) {
+//                    gameOver = true;
+//                }
+//            }
+//        }
         if (bird.position.y < 0 || bird.position.y > 600) { gameOver = true; }
         if (Gdx.input.isKeyPressed(Input.Keys.SPACE) && gameOver) {
             reCreate();
